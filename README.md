@@ -6,3 +6,5 @@ USE AT YOUR OWN RISK!
 - onedrive-replace-char.ps1
 - hyperv-check-for-snapshots.ps1
 - create-settings.ps1
+
+## Contributors
