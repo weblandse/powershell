@@ -1,0 +1,1 @@
+# This script checks the file hash for keepass against the txt record from hash.webland.se
