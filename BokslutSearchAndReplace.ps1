@@ -5,7 +5,7 @@ $dummyPath = "C:\temp\DUMMY\"
 $backupPath = "C:\temp\BOKSLUT\"
 # Location and name of BOKSLUT.INI
 $iniFile = "Bokslut.ini"
-$iniPath = "PATH WHERE BOKSLUT.INI IS LOCATED"
+$iniPath = "."
 # Test if dummy folder exists, if not create it
 if (!(Test-Path -path $dummyPath)) {
     New-Item -ItemType Directory -Force -Path $dummyPath
