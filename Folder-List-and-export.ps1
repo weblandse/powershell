@@ -1,8 +1,8 @@
 # Get the root folder path
-$rootFolder = "<path to the root folder>"
+$rootFolder = "C:\temp"
 
 # Get all the folders and subfolders in the root folder
 $folders = Get-ChildItem -Path $rootFolder -Recurse | Where-Object { $_.PSIsContainer }
 
-# Export the list to a CSV file
-$folders | Select-Object FullName | Export-Csv -Path "folders.csv" -NoTypeInformation
+#Split into to collumns, first root folder and second subfolder
+$folders | Select-Object @{Name="RootFolder";Expression={$rootFolder}}, @{Name="SubFolder";Expression={$_.FullName -replace [regex]::Escape($rootFolder), ""}} | Export-Csv -Path "folders.csv" -NoTypeInformation
